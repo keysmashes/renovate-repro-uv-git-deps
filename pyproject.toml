@@ -3,7 +3,7 @@ name = "renovate-repro-uv-git-deps"
 version = "0.1.0"
 requires-python = ">=3.14"
 dependencies = [
-    "django-types",
+    "django-types==0.22.0",
 ]
 
 [tool.uv.sources.django-types]
