@@ -6,5 +6,6 @@ dependencies = [
     "django-types",
 ]
 
-[tool.uv.sources]
-django-types = { git = "https://github.com/sbdchd/django-types", rev = "145e9dfc496f8b4536b7334b5c6d69c29a44252f" }
+[tool.uv.sources.django-types]
+git = "https://github.com/sbdchd/django-types"
+rev = "145e9dfc496f8b4536b7334b5c6d69c29a44252f"
