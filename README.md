@@ -1,17 +1,23 @@
-# minimal-reproduction-template
+# 39937
 
-First, read the [Renovate minimal reproduction instructions](https://github.com/renovatebot/renovate/blob/main/docs/development/minimal-reproductions.md).
-
-Then replace the current `h1` with the Renovate Issue/Discussion number.
+The problem: `pyproject.toml` contains both `django-types==0.22.0` and a `tool.uv.sources.django-types` table containing an exact git version.
 
 ## Current behavior
 
-Explain the current behavior here.
+There is a warning in the Renovate Dependency Dashboard:
+
+> [!WARNING]
+> Renovate failed to look up the following dependencies: `Could not determine new digest for update (git-refs package https://github.com/sbdchd/django-types)`.
+>
+> Files affected: `pyproject.toml`
 
 ## Expected behavior
 
-Explain the expected behavior here.
+One of the following:
+
+- There shouldn't be a warning, and Renovate should update from 0.22.0 to 0.23.0 (and remove the git pin) whenever 0.23.0 is released
+- There should be a warning explicitly stating that there are conflicting requirements, suggesting to remove either the `==0.22.0` or the git pin
 
 ## Link to the Renovate issue or Discussion
 
-Put your link to the Renovate issue or Discussion here.
+https://github.com/renovatebot/renovate/discussions/39937
